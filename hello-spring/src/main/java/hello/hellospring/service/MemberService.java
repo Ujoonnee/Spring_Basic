@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service    // MemberController와 연결시키기 위한 어노테이션. 없으면 그냥 순수 코드로 스프링이 인식할 수 없음
+//@Service    // MemberController 와 연결시키기 위한 어노테이션. 없으면 그냥 순수 코드로 스프링이 인식할 수 없음
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    @Autowired
+//    @Autowired  // Autowired 는 Spring container 에 올라간 상태에서만 동작함
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

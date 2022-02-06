@@ -5,14 +5,13 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository // Autowire을 위한 어노테이션
+//@Repository // Autowire을 위한 어노테이션
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
 
     @Override
-
     public Member save(Member member) {
         member.setId(++sequence);
         store.put(member.getId(), member);
